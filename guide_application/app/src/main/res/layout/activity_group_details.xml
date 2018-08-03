@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_gray"
+    android:layoutDirection="rtl"
+    android:textDirection="rtl"
+    tools:targetApi="jelly_bean_mr1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/splitter"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:alpha="0.7"
+            android:background="@drawable/spliter"
+            android:orientation="horizontal" />
+
+        <RelativeLayout
+            android:id="@+id/info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/splitter"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/group_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="اسم الفوج"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/group_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/group_name"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:text="بلد الفوج"
+                android:textColor="@color/colorAccent"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/group_counter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/group_country"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:text="عدد اعضاء الفوج"
+                android:textColor="@color/gray"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/splitter_2"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:layout_below="@+id/info"
+            android:layout_marginTop="10dp"
+            android:alpha="0.7"
+            android:background="@drawable/spliter"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/splitter_2"
+            android:layout_marginTop="0dp"
+            android:alpha="0.5"
+            android:background="@drawable/spliter"
+            android:orientation="horizontal" />
+
+        <LinearLayout
+            android:id="@+id/options"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/splitter_2"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:id="@+id/add_new_hajj"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:alpha="0.8"
+                    android:text="اضافة حاج للمجموعة"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="1.3dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="7dp"
+                android:layout_marginTop="7dp"
+                android:alpha="0.5"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:id="@+id/edit_group"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:alpha="0.8"
+                    android:text="تعديل المجموعة"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/splitter_3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/options"
+            android:layout_marginTop="0dp"
+            android:alpha="0.5"
+            android:background="@drawable/spliter"
+            android:orientation="horizontal" />
+
+        <LinearLayout
+            android:id="@+id/splitter_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/options"
+            android:alpha="0.7"
+            android:background="@drawable/spliter"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:text="الحجاج"
+                android:textColor="@color/gray"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/hajj_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/splitter_4" />
+
+        <LinearLayout
+            android:id="@+id/splitter_5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/hajj_recycler_view"
+            android:alpha="0.7"
+            android:background="@drawable/spliter"
+            android:orientation="vertical" />
+    </RelativeLayout>
+</ScrollView>

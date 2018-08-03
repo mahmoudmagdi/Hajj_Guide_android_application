@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#fc4355</color>
+    <color name="colorPrimaryDark">#f5374a</color>
+    <color name="colorAccent">#fcb944</color>
+    <color name="transparent">#00000000</color>
+    <color name="green">#00ea08</color>
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+    <color name="gray">#585858</color>
+    <color name="white_gray">#e9e7e7</color>
+    <color name="white_colorPrimary">#f95e6d</color>
+    <color name="colorRouteLine">@color/colorPrimary</color>
+</resources>

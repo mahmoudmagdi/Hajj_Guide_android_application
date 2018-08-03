@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:layoutDirection="rtl"
+    android:textDirection="rtl"
+    tools:targetApi="jelly_bean_mr1">
+
+    <RelativeLayout
+        android:id="@+id/no_internet_connection"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/all_posts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.CardView
+                    android:id="@id/card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    app:cardCornerRadius="2dp"
+                    app:cardElevation="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp">
+
+                        <EditText
+                            android:id="@+id/post_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:background="@drawable/post_content_background"
+                            android:gravity="start"
+                            android:hint="محتوى المنشور"
+                            android:inputType="textLongMessage"
+                            android:padding="5dp"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/black"
+                            android:textDirection="rtl"
+                            android:textStyle="normal"
+                            tools:targetApi="jelly_bean_mr1" />
+
+                        <Spinner
+                            android:id="@+id/post_group"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/post_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/post_type_background"
+                            android:padding="5dp"
+                            android:text="اختيار فوج معين"
+                            android:textColor="@color/gray"
+                            android:textDirection="rtl"
+                            tools:targetApi="jelly_bean_mr1" />
+
+                        <Spinner
+                            android:id="@+id/post_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/post_group"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/post_type_background"
+                            android:padding="5dp"
+                            android:text="نوع المنشور"
+                            android:textColor="@color/gray"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/post_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:text="التاريخ"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorAccent"
+                            android:textStyle="normal" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <Button
+                    android:id="@+id/post"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/card"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="3dp"
+                    android:backgroundTint="@color/colorAccent"
+                    android:enabled="false"
+                    android:text="post"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/all_posts_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/post"
+                    android:layout_marginTop="10dp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/add_new_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="30dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:src="@drawable/ic_add" />
+</RelativeLayout>

@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">moshrif guide</string>
+    <string name="signup">Signup</string>
+    <string name="login">Login</string>
+    <string name="enter_hajj_first_name">ادخل الاسم الاول للحاج</string>
+    <string name="enter_hajj_last_name">ادخل الاسم الاخير للحاج</string>
+    <string name="enter_hajj_pass_no">ادخل رقم الباسبور للحاج</string>
+
+    <string-array name="post_types">
+        <item>اعلان</item>
+        <item>تحذير</item>
+        <item>استفتاء</item>
+        <item>توجيه</item>
+    </string-array>
+    <string-array name="gender">
+        <item>ذكر</item>
+        <item>انثى</item>
+    </string-array>
+    <string-array name="countries">
+        <item>مصر</item>
+        <item>السعودية</item>
+    </string-array>
+</resources>
